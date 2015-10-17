@@ -21,7 +21,7 @@ module.exports = function(environment) {
       // when it is created
       emberDataSails:  {
         // default is to use same host and port as the ember app:
-        host: '//api.wego.com.br',
+        host: 'http://10.150.254.114:1337',
         // this is the default and is the path to the sails io script:
         scriptPath: '/js/dependencies/sails.io.js'
       }
@@ -34,13 +34,12 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.apiBaseUrl = 'http://10.150.254.114:1337';
-    // ENV.apiBaseUrl = 'http://api.staging.wego.com.br';
   }
   if (environment === 'staging'){
-    ENV.apiBaseUrl = 'http://api.staging.wego.com.br';
+    ENV.apiBaseUrl = 'http://10.150.254.114:1337';
   }
   if (environment === 'production') {
-    ENV.apiBaseUrl = 'http://api.wego.com.br';
+    ENV.apiBaseUrl = 'http://10.150.254.114:1337';
   }
 
   if (environment === 'test') {
