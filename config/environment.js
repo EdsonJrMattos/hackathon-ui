@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'hackathon-ui',
     environment: environment,
+    podModulePrefix: 'hackathon-ui/pods',
+    usePodsByDefault: true,
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -16,15 +18,28 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      emberDataSails:  {
+        // default is to use same host and port as the ember app:
+        host: '//api.wego.com.br',
+        // this is the default and is the path to the sails io script:
+        scriptPath: '/js/dependencies/sails.io.js'
+      }
     }
   };
-
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.apiBaseUrl = 'http://10.150.254.114:1337';
+    // ENV.apiBaseUrl = 'http://api.staging.wego.com.br';
+  }
+  if (environment === 'staging'){
+    ENV.apiBaseUrl = 'http://api.staging.wego.com.br';
+  }
+  if (environment === 'production') {
+    ENV.apiBaseUrl = 'http://api.wego.com.br';
   }
 
   if (environment === 'test') {
@@ -38,10 +53,5 @@ module.exports = function(environment) {
 
     ENV.APP.rootElement = '#ember-testing';
   }
-
-  if (environment === 'production') {
-
-  }
-
   return ENV;
 };
