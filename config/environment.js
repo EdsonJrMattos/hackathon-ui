@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'hackathon-ui',
+    podModulePrefix: 'hackathon-ui/pods',
     environment: environment,
     podModulePrefix: 'hackathon-ui/pods',
     usePodsByDefault: true,
