@@ -5,9 +5,8 @@ module.exports = function(environment) {
     modulePrefix: 'hackathon-ui',
     podModulePrefix: 'hackathon-ui/pods',
     environment: environment,
-    podModulePrefix: 'hackathon-ui/pods',
     usePodsByDefault: true,
-    baseURL: '/',
+    baseURL: '/dashboard',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
