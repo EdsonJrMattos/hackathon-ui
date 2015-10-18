@@ -1,1 +1,125 @@
-{{outlet}}
+<style media="screen">
+    .row{margin-bottom:10px;}
+</style>
+<div class="col-md-8 col-md-offset-2">
+<div class="row text-center">
+    <h2>Cadastro de Empregador</h2>
+</div>
+<div class="row">
+    <label for="firstname" class="col-md-2">
+        Nome:
+    </label>
+    <div class="col-md-9">
+      {{input
+          id          = 'firstname'
+          type        = "text"
+          class       = "form-control"
+          placeholder = "Nome"
+          value       =  model.name
+          required    =  true
+       }}
+    </div>
+</div>
+<div class="row">
+    <label for="emailaddress" class="col-md-2">
+        Email:
+    </label>
+    <div class="col-md-9">
+      {{input
+        id          = 'emailaddress'
+        type        = "email"
+        class       = "form-control"
+        placeholder = "Email"
+        value       =  model.email
+        required    =  true
+     }}
+     <p class="help-block">
+         Example: yourname@domain.com
+     </p>
+    </div>
+</div>
+<div class="row">
+    <label for="cpf" class="col-md-2">
+        CPF:
+    </label>
+    <div class="col-md-9">
+      {{input
+        id          = 'cpf'
+        type        = "text"
+        class       = "form-control"
+        placeholder = "000.000.000-00"
+        value       =  model.cpf
+        required    =  true
+      }}
+    </div>
+</div>
+<div class="row">
+    <label for="rg" class="col-md-2">
+        RG:
+    </label>
+    <div class="col-md-9">
+      {{input
+        id          = 'rg'
+        type        = "text"
+        class       = "form-control"
+        placeholder = "RG"
+        value       =  model.rg
+        required    =  true
+      }}
+    </div>
+</div>
+<div class="row">
+    <label for="phone" class="col-md-2">
+        Telefone:
+    </label>
+    <div class="col-md-9">
+      {{input
+        id          = 'phone'
+        type        = "text"
+        class       = "form-control"
+        placeholder = "Telefone"
+        value       =  model.phone
+        required    =  true
+      }}
+    </div>
+</div>
+<div class="row">
+    <label for="city" class="col-md-2">
+        Cidade:
+    </label>
+    <div class="col-md-9">
+      {{input
+        id          = 'city'
+        type        = "text"
+        class       = "form-control"
+        placeholder = "Cidade"
+        value       =  model.cidade
+        required    =  true
+      }}
+    </div>
+</div>
+<div class="row">
+    <label for="bairro" class="col-md-2">
+        Bairro:
+    </label>
+    <div class="col-md-9">
+      {{input
+        id          = 'bairro'
+        type        = "text"
+        class       = "form-control"
+        placeholder = "Bairro"
+        value       =  model.bairro
+        required    =  true
+      }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-10">
+        <button {{action 'save'}} class="btn btn-info">
+            Register
+        </button>
+    </div>
+</div>
+</div>
