@@ -8,7 +8,9 @@ var Router = Ember.Router.extend({
 export default Router.map(function() {
   this.route('dashboard',{path: '/'});
   this.route('settings');
-  this.route('employer');
+  this.route('employer', function() {
+    this.route('new');
+  });
   this.route('candidate', function() {
     this.route('show');
   });
