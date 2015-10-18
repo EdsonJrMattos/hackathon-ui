@@ -40,7 +40,7 @@
 </div>
 <div class="row">
     <label for="cpf" class="col-md-2">
-        CPF:
+        CNPJ:
     </label>
     <div class="col-md-9">
       {{input
@@ -48,22 +48,7 @@
         type        = "text"
         class       = "form-control"
         placeholder = "000.000.000-00"
-        value       =  model.cpf
-        required    =  true
-      }}
-    </div>
-</div>
-<div class="row">
-    <label for="rg" class="col-md-2">
-        RG:
-    </label>
-    <div class="col-md-9">
-      {{input
-        id          = 'rg'
-        type        = "text"
-        class       = "form-control"
-        placeholder = "RG"
-        value       =  model.rg
+        value       =  model.cnpj
         required    =  true
       }}
     </div>
