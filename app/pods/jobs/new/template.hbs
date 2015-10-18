@@ -51,6 +51,33 @@
         </div>
     </div>
     <div class="row">
+          <label for="competence" class="col-sm-2 col-xs-12">
+              competencias:
+          </label>
+          <div class="col-sm-3 col-xs-3">
+            {{input
+              id          = 'competence'
+              type        = "text"
+              class       = "form-control"
+              placeholder = "competencia"
+              value       =  competence
+              required    =  true
+            }}
+          </div>
+          <div class="">
+            <button  class="btn btn-primary" {{action 'Addcompetence'}}><i class="fa fa-book"></i></button>
+          </div>
+      </div>
+    <div class="row">
+        {{#each item in model.candidate.competences}}
+          <div class="vagas-item">
+            <div class="panel panel-success">
+              <div class="panel-heading text-center">{{item.name}}</div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    <div class="row">
         <div class="col-md-2">
         </div>
         <div class="col-md-10">

@@ -67,3 +67,14 @@
 {{!-- {{else}}
   {{outlet}}
 {{/if}} --}}
+<script type="text/javascript">
+$(document).scroll(function() {
+    var top = document.body.scrollTop;
+    
+    if (parseInt(top) > 70) {
+      $('nav').addClass('bcg-header');
+    }else {
+      $('nav').removeClass('bcg-header');
+  }
+});
+</script>

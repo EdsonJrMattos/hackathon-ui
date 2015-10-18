@@ -11,6 +11,14 @@ export default Ember.Controller.extend({
               model.save()
                    .then(this.transitionToRoute('jobs.show'));
             });
+      },
+      Addcompetence:function  () {
+        var model = this.get('model.candidate');
+        model.get('competences')
+             .pushObject(this.store.createRecord('competence',{
+               name:this.get('competence')
+             }));
+        this.set('competence','');
       }
   }
 });

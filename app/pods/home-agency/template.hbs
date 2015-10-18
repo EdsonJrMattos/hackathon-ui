@@ -34,7 +34,9 @@
                         <a class="page-scroll" href="#team">Time</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Cadastro</a>
+                        {{#link-to 'login'}}
+                            login
+                        {{/link-to}}
                     </li>
                 </ul>
             </div>
@@ -44,13 +46,13 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header class="agency-background">
         <div class="transparent"></div>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Prepare-se para sua entrevista...</div>
-                <div class="intro-heading">Aqui você encontra a vaga certa para o seu perfil!</div>
-                <a href="#services" class="page-scroll btn btn-xl">Cadastre-se</a>
+                <div class="intro-lead-in">Seja mais acertivo na sua busca.</div>
+                <div class="intro-heading">Encontre os candidatos certos para as vagas dispoíveis</div>
+                <a href="#services" class="page-scroll btn btn-xl">Confira agora</a>
             </div>
         </div>
     </header>
