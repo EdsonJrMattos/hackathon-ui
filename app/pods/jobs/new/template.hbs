@@ -2,59 +2,63 @@
     .row{margin-bottom:10px;}
 </style>
 <div class="col-md-8 col-md-offset-2">
-<div class="row text-center">
-    <h2>Cadastro de Vaga</h2>
-</div>
-<div class="row">
-    <label for="title" class="col-md-2">
-        Titulo:
-    </label>
-    <div class="col-md-9">
-      {{input
-          id          = 'title'
-          type        = "text"
-          class       = "form-control"
-          placeholder = "Titulo"
-          value       =  model.vacancy.title
-          required    =  true
-       }}
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row text-center">
+        <h2>Cadastrar Vaga</h2>
     </div>
-</div>
-<div class="row">
-    <label for="discriptionInput" class="col-md-2">
-        Descrição:
-    </label>
-    <div class="col-md-9">
-      {{input
-        id          = 'discriptionInput'
-        type        = "text"
-        class       = "form-control"
-        placeholder = "Descrição"
-        value       =  model.vacancy.description
-        required    =  true
-     }}
+    <div class="row">
+        <label for="title" class="col-md-2">
+            Titulo:
+        </label>
+        <div class="col-md-9">
+          {{input
+              id          = 'title'
+              type        = "text"
+              class       = "form-control"
+              placeholder = "Titulo"
+              value       =  model.vacancy.title
+              required    =  true
+           }}
+        </div>
     </div>
-</div>
-<div class="row">
-    <label for="" class="col-md-2">
-        Empresa:
-    </label>
-    <div class="col-md-9">
-      {{ember-selectize
-        content=empresas
-        optionValuePath="content"
-        optionLabelPath="content"
-        selection=empresass
-        placeholder="Selecione uma empresa" }}
+    <div class="row">
+        <label for="discriptionInput" class="col-md-2">
+            Descrição:
+        </label>
+        <div class="col-md-9">
+          {{input
+            id          = 'discriptionInput'
+            type        = "text"
+            class       = "form-control"
+            placeholder = "Descrição"
+            value       =  model.vacancy.description
+            required    =  true
+         }}
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-2">
+    <div class="row">
+        <label for="" class="col-md-2">
+            Empresa:
+        </label>
+        <div class="col-md-9">
+          {{ember-selectize
+            content=empresas
+            optionValuePath="content"
+            optionLabelPath="content"
+            selection=empresass
+            placeholder="Selecione uma empresa" }}
+        </div>
     </div>
-    <div class="col-md-10">
-        <button {{action 'save'}} class="btn btn-amarelo">
-            Register
-        </button>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-10">
+            <button {{action 'save'}} class="btn btn-amarelo">
+                Cadastrar
+            </button>
+        </div>
     </div>
+  </div>
 </div>
 </div>
