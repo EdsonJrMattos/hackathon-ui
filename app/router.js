@@ -19,6 +19,7 @@ export default Router.map(function() {
   this.route('jobs', function() {
     this.route('new');
     this.route('show');
+    this.route('perfil');
   });
   this.route('profile');
   this.route('home');

@@ -19,20 +19,22 @@
     {{#each item in model}}
       <div class="col-md-6" >
         <div>
-          <div class="panel-heading" >
-            <figure><img src="{{item.url}}"></figure>
-            <div class="item">
-              <h4>{{item.empresa}}</h4>
-              <div class="panel-description">
-                <div class="title">
-                  <h4>{{item.title}}</h4>
-                </div>
-                <div class="description">
-                  <h5>{{item.description}}</h5>
+          {{#link-to 'jobs.perfil'}}
+            <div class="panel-heading" >
+              <figure><img src="{{item.url}}"></figure>
+              <div class="item">
+                <h4>{{item.empresa}}</h4>
+                <div class="panel-description">
+                  <div class="title">
+                    <h4>{{item.title}}</h4>
+                  </div>
+                  <div class="description">
+                    <h5>{{item.description}}</h5>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          {{/link-to}}
         </div>
       </div>
     {{/each}}
