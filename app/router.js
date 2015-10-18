@@ -21,4 +21,5 @@ export default Router.map(function() {
   });
   this.route('profile');
   this.route('home');
+  this.route('employer.show');
 });

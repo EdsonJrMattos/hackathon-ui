@@ -8,6 +8,43 @@
     background: #fed136;
     color: #2B2B2B;
   }
+  .grid-user .panel-heading {
+    padding: 0px !important;
+    position: relative;
+  }
+  .grid-user .panel-heading .name{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    font-size: 18px;
+    top: 0px;
+    padding: 10px 20px;
+  }
+  .grid-user .panel-heading .occupation{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 0px;
+    padding: 6px 20px;
+    width: 70%;
+    left: 15%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  .grid-user .panel-body i{
+    margin-left: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .grid-user .panel-body i:hover{
+    color: #fed136 !important;
+    cursor: pointer;
+  }
+  .grid-user .panel-heading img{
+    width: 100%;
+    height: 270px;
+  }
 </style>
 {{!-- {{#if isAuthenticated}} --}}
   <div id="wrapper">

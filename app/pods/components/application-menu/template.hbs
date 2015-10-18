@@ -6,9 +6,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-      {{#link-to 'dashboard' class="navbar-brand"}}Quick
-                  <img src="images/logobco.png" width="50" style="float: left;
-    margin-top: -10px;"> Work{{/link-to}}
+      {{#link-to 'dashboard' class="navbar-brand"}}
+        <img src="images/logobco.png" height="50" style="float: left;
+    margin-top: -15px;">
+      {{/link-to}}
   </div>
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul id="active" class="nav navbar-nav side-nav">
@@ -16,19 +17,19 @@
       <li>{{#link-to 'jobs'}}<i class="fa fa-thumb-tack"></i> Vagas{{/link-to}}
       <ul>
         <li>{{#link-to 'jobs.new'}}Novo{{/link-to}}</li>
-        <li>{{#link-to 'jobs.show'}}Vilualizar{{/link-to}}</li>
+        <li>{{#link-to 'jobs.show'}}Visualizar{{/link-to}}</li>
       </ul>
       </li>
       <li>{{#link-to 'employer'}}<i class="fa fa-suitcase"></i> Empressas{{/link-to}}
         <ul>
           <li>{{#link-to 'employer.new'}}Novo{{/link-to}}</li>
-          {{!-- <li>{{#link-to 'employer.show'}}Vilualizar{{/link-to}}</li> --}}
+          <li>{{#link-to 'employer.show'}}Visualizar{{/link-to}}</li>
         </ul>
       </li>
       <li>{{#link-to 'candidate'}}<i class="fa fa-users"></i> Candidatos{{/link-to}}
         <ul>
           <li>{{#link-to 'candidate.new'}}Novo{{/link-to}}</li>
-          <li>{{#link-to 'candidate.show'}}Vilualizar{{/link-to}}</li>
+          <li>{{#link-to 'candidate.show'}}Visualizar{{/link-to}}</li>
         </ul>
       </li>
     </ul>
@@ -62,12 +63,6 @@
           <li class="divider"></li>
           <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
         </ul>
-      </li>
-      <li class="divider-vertical"></li>
-      <li>
-        <form class="navbar-search">
-          <input type="text" placeholder="Search" class="form-control">
-        </form>
       </li>
     </ul>
   </div>
