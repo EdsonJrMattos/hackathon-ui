@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  empresas: ['Teste1'],
   actions: {
       save:function () {
         var model = this.get('model.vacancy');

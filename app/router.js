@@ -22,8 +22,12 @@ export default Router.map(function() {
   });
   this.route('profile');
   this.route('home');
-  this.route('employer.show');
   this.route('agency', function() {
     this.route('new');
   });
+  this.route('home-agency');
+  this.route('home-finalize');
+  this.route('home-finalize-success');
+  this.route('home-finalize-2');
+  this.route('login');
 });
