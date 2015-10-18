@@ -12,6 +12,8 @@ export default Router.map(function() {
   this.route('candidate', function() {
     this.route('new');
   });
-  this.route('jobs');
+  this.route('jobs', function() {
+    this.route('new');
+  });
   this.route('profile');
 });
