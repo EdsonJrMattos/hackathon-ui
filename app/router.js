@@ -10,6 +10,7 @@ export default Router.map(function() {
   this.route('settings');
   this.route('employer', function() {
     this.route('new');
+    this.route('show');
   });
   this.route('candidate', function() {
     this.route('show');
