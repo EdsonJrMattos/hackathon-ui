@@ -17,14 +17,34 @@
 <div class="row">
   <div class="col-md-12">
     {{#each item in model}}
-      <div class="col-md-6">
-        <div class="panel panel-success">
-          <div class="panel-heading"><h4>{{item.title}}</h4></div>
-          <div class="panel-body">
-            Descrição: {{item.description}}
+      <div class="col-md-6" >
+        <div>
+          <div class="panel-heading" >
+            <figure><img src="{{item.url}}"></figure>
+            <div class="item">
+              <h4>{{item.empresa}}</h4>
+              <div class="panel-description">
+                <div class="title">
+                  <h4>{{item.title}}</h4>
+                </div>
+                <div class="description">
+                  <h5>{{item.description}}</h5>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     {{/each}}
   </div>
 </div>
+<style media="screen">
+  .panel-heading{position:relative;padding:0;margin-bottom:10px;}
+  .panel-heading figure{width:100%;height:350px;opacity: 0.5;padding:0;}
+  .panel-heading figure img{width:100%;height:350px;}
+  .panel-heading .item{position:absolute;top:0;width:100%;}
+  .panel-heading .item h4{padding:10px;background-color:#FED136;color:black;opacity:0.8;}
+  .panel-heading .item h5{padding:10px;background-color:#060504;color:white;opacity:0.8;height:150px;}
+  .panel-heading .item .panel-description{width:70%;margin:0 auto;}
+  .panel-heading .item .panel-description h4{margin-top:30px;}
+</style>
