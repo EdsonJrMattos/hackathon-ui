@@ -10,10 +10,11 @@ export default Router.map(function() {
   this.route('settings');
   this.route('employer');
   this.route('candidate', function() {
-    this.route('new');
+    this.route('show');
   });
   this.route('jobs', function() {
     this.route('new');
   });
   this.route('profile');
+  this.route('home');
 });

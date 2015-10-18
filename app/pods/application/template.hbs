@@ -1,6 +1,10 @@
-<div id="wrapper">
-  {{application-menu}}
-  <div id="page-wrapper">
-    {{outlet}}
+{{!-- {{#if isAuthenticated}} --}}
+  <div id="wrapper">
+    {{application-menu}}
+    <div id="page-wrapper">
+      {{outlet}}
+    </div>
   </div>
-</div>
+{{!-- {{else}}
+  {{outlet}}
+{{/if}} --}}
