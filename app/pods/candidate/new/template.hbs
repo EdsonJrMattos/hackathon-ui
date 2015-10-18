@@ -15,7 +15,7 @@
           type        = "text"
           class       = "form-control"
           placeholder = "Nome"
-          value       =  model.name
+          value       =  model.candidate.name
           required    =  true
        }}
     </div>
@@ -30,7 +30,7 @@
         type        = "email"
         class       = "form-control"
         placeholder = "Email"
-        value       =  model.email
+        value       =  model.candidate.email
         required    =  true
      }}
      <p class="help-block">
@@ -48,7 +48,7 @@
         type        = "text"
         class       = "form-control"
         placeholder = "000.000.000-00"
-        value       =  model.cpf
+        value       =  model.candidate.cpf
         required    =  true
       }}
     </div>
@@ -63,7 +63,7 @@
         type        = "text"
         class       = "form-control"
         placeholder = "RG"
-        value       =  model.rg
+        value       =  model.candidate.rg
         required    =  true
       }}
     </div>
@@ -78,7 +78,7 @@
         type        = "text"
         class       = "form-control"
         placeholder = "Telefone"
-        value       =  model.phone
+        value       =  model.candidate.phone
         required    =  true
       }}
     </div>
@@ -93,7 +93,7 @@
         type        = "text"
         class       = "form-control"
         placeholder = "Cidade"
-        value       =  model.cidade
+        value       =  model.candidate.city
         required    =  true
       }}
     </div>
@@ -108,7 +108,7 @@
         type        = "text"
         class       = "form-control"
         placeholder = "Bairro"
-        value       =  model.bairro
+        value       =  model.candidate.neighborhood
         required    =  true
       }}
     </div>
@@ -119,15 +119,15 @@
     </label>
     <div class="col-md-9">
       {{ember-selectize
-        content=controller.agency
+        content=model.agency
         optionValuePath="content"
         optionLabelPath="content.name"
-        selection=model.agency
+        selection=model.candidate.agency
         placeholder="Selecione uma agencia" }}
     </div>
 </div>
 <div class="row">
-    <label for="competence" class="col-sm-3 col-xs-12">
+    <label for="competence" class="col-sm-2 col-xs-12">
         competencias:
     </label>
     <div class="col-sm-3 col-xs-3">
@@ -141,8 +141,17 @@
       }}
     </div>
     <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2">
-      <button  class="btn btn-primary" {{action Addcompetence}}><i class="fa fa-book"></i></button>
+      <button  class="btn btn-primary" {{action 'Addcompetence'}}><i class="fa fa-book"></i></button>
     </div>
+</div>
+<div class="row">
+  {{#each item in model.candidate.competences}}
+    <div class="col-md-2 itens">
+      <div class="panel panel-default">
+        <div class="panel-heading"><p class="text-center">{{item.name}}</p></div>
+      </div>
+    </div>
+  {{/each}}
 </div>
 <div class="row">
     <div class="col-md-2">
