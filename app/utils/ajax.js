@@ -1,6 +1,6 @@
 import ajax from 'ic-ajax';
 import Ember from 'ember';
-import environment from 'wego-admin-cli/config/environment';
+import environment from 'hackathon-ui/config/environment';
 import _ from 'lodash';
 
 var get = Ember.get;
