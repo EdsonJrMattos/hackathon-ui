@@ -32,13 +32,13 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.apiBaseUrl = 'http://10.150.254.114:1337';
+    ENV.apiBaseUrl = 'http://localhost:1337';
   }
   if (environment === 'staging'){
-    ENV.apiBaseUrl = 'http://10.150.254.114:1337';
+    ENV.apiBaseUrl = 'http://localhost:1337';
   }
   if (environment === 'production') {
-    ENV.apiBaseUrl = 'http://10.150.254.114:1337';
+    ENV.apiBaseUrl = 'http://localhost:1337';
   }
 
   if (environment === 'test') {
