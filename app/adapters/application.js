@@ -3,7 +3,11 @@ export default SailsRESTAdapter.extend({
   /**
    * The host of your API
    */
-  host: 'http://10.150.254.114:1337',
+
+  host: 'http://localhost:1337',
+  /**
+   * Whether to use CSRF tokens or not
+   */
   useCSRF: false,
 
   coalesceFindRequests: true,
