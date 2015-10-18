@@ -45,14 +45,25 @@
     width: 100%;
     height: 270px;
   }
+
+  .intro-text {
+    padding-top: 150px !important;
+    padding-bottom: 400px !important;
+  }
+
+  .logo-grid {
+    position: relative !important;
+    width: 100% !important;
+    padding: 20px !important;
+    text-align: center !important;
+  }
+  .logo-grid img{
+    margin-top: 10px;
+    float: none !important;
+  }
 </style>
 {{!-- {{#if isAuthenticated}} --}}
-  <div id="wrapper">
-    {{application-menu}}
-    <div id="page-wrapper">
-      {{outlet}}
-    </div>
-  </div>
+{{outlet}}
 {{!-- {{else}}
   {{outlet}}
 {{/if}} --}}

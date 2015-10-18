@@ -1,7 +1,7 @@
 <style media="screen">
     .row{margin-bottom:10px;}
 </style>
-<div class="col-lg-12">
+<div class="col-md-8 col-md-offset-2">
 <div class="row text-center">
     <h2>Cadastro de Vaga</h2>
 </div>
@@ -37,15 +37,15 @@
 </div>
 <div class="row">
     <label for="" class="col-md-2">
-        Agencia:
+        Empresa:
     </label>
     <div class="col-md-9">
       {{ember-selectize
-        content=model.agency
+        content=empresas
         optionValuePath="content"
-        optionLabelPath="content.name"
-        selection=model.vacancy.agency
-        placeholder="Selecione uma agencia" }}
+        optionLabelPath="content"
+        selection=empresass
+        placeholder="Selecione uma empresa" }}
     </div>
 </div>
 <div class="row">
