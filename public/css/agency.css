@@ -280,6 +280,10 @@ header {
     -o-background-size: cover;
 }
 
+.agency-background{
+    background-image: url(../images/agency-bcg.jpg) !important;
+}
+
 header .transparent {
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
