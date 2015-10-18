@@ -6,7 +6,7 @@ export default DS.Model.extend({
   cpf:      DS.attr('string'),
   rg:       DS.attr('string'),
   phone:    DS.attr('string'),
-  cidade:   DS.attr('string'),
-  bairro:   DS.attr('string'),
+  city:   DS.attr('string'),
+  neighborhood:   DS.attr('string'),
   vacancys: DS.hasMany('vacancy', {async: true})
 });
