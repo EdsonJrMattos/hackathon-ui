@@ -1,10 +1,9 @@
 import SailsRESTAdapter from 'ember-data-sails/adapters/sails-rest';
-import ajax from 'hackathon-ui/utils/ajax';
 export default SailsRESTAdapter.extend({
   /**
    * The host of your API
    */
-  host: ajax.apiHost,
+  host: 'http://10.150.254.114:1337',
   /**
    * Whether to use CSRF tokens or not
    */
