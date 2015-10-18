@@ -1,11 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  employer:[{id:1,name:"banana"}],
   actions: {
       save:function () {
-        this.get('model')
-            .save();
+        var model = this.get('model.vacancy');
+        this.store.find('employer')
+            .then(data=>{
+              model.set('employer',data.get('firstObject'));
+              model.save()
+                   .then(this.transitionToRoute('jobs.show'));
+            });
       }
   }
 });

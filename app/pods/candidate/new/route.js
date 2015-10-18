@@ -2,6 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function  () {
-    return this.store.createRecord('candidate');
+    return Ember.RSVP.hash({
+      candidate: this.store.createRecord('candidate'),
+      competence: this.store.createRecord('competence'),
+      agency:   this.store.find('agency')
+    });
   }
 });
