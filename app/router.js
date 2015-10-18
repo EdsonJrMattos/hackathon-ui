@@ -9,7 +9,9 @@ export default Router.map(function() {
   this.route('dashboard',{path: '/'});
   this.route('settings');
   this.route('employer');
-  this.route('candidate');
+  this.route('candidate', function() {
+    this.route('new');
+  });
   this.route('jobs');
   this.route('profile');
 });
