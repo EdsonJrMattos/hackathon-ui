@@ -15,12 +15,22 @@
       <li class="selected">{{#link-to 'dashboard'}}<i class="fa fa-globe"></i> Dashboard{{/link-to}}</li>
       <li>{{#link-to 'jobs'}}<i class="fa fa-thumb-tack"></i> Vagas{{/link-to}}
       <ul>
-        <li>Novo</li>
-        <li>Vilualizar</li>
+        <li>{{#link-to 'jobs.new'}}Novo{{/link-to}}</li>
+        <li>{{#link-to 'jobs.show'}}Vilualizar{{/link-to}}</li>
       </ul>
       </li>
-      <li>{{#link-to 'employer'}}<i class="fa fa-suitcase"></i> Empressas{{/link-to}}</li>
-      <li>{{#link-to 'candidate'}}<i class="fa fa-users"></i> Candidatos{{/link-to}}</li>
+      <li>{{#link-to 'employer'}}<i class="fa fa-suitcase"></i> Empressas{{/link-to}}
+        <ul>
+          <li>{{#link-to 'employer.new'}}Novo{{/link-to}}</li>
+          {{!-- <li>{{#link-to 'employer.show'}}Vilualizar{{/link-to}}</li> --}}
+        </ul>
+      </li>
+      <li>{{#link-to 'candidate'}}<i class="fa fa-users"></i> Candidatos{{/link-to}}
+        <ul>
+          <li>{{#link-to 'candidate.new'}}Novo{{/link-to}}</li>
+          <li>{{#link-to 'candidate.show'}}Vilualizar{{/link-to}}</li>
+        </ul>
+      </li>
     </ul>
     <ul class="nav navbar-nav navbar-right navbar-user">
       <li class="dropdown messages-dropdown">
@@ -62,3 +72,45 @@
     </ul>
   </div>
 </nav>
+
+<style type="text/css">
+  .side-nav {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  .side-nav * {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+
+  .side-nav li:hover ul {
+    display: block;
+  }
+  .side-nav li ul {
+    list-style: none;
+    display: none;
+  }
+  .side-nav li ul li{
+    padding-top: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    padding-bottom: 10px;
+  }
+  .side-nav li ul li a{
+    text-decoration: none;
+  }
+  .side-nav li ul li:hover{
+    background: #333;
+    -moz-box-shadow: inset 3px 0 0 0 #fed136;
+    -webkit-box-shadow: inset 3px 0 0 0 #fed136;
+    box-shadow: inset 3px 0 0 0 #fed136;
+    -webkit-transition: all 0.5s ease !important;
+    -moz-transition: all 0.5s ease !important;
+    -o-transition: all 0.5s ease !important;
+    transition: all 0.5s ease !important;
+  }
+</style>
