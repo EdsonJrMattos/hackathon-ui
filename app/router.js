@@ -13,6 +13,7 @@ export default Router.map(function() {
   });
   this.route('candidate', function() {
     this.route('show');
+    this.route('new');
   });
   this.route('jobs', function() {
     this.route('new');
